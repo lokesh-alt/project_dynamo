@@ -1,0 +1,68 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.4.1"
+        },
+        "summary": {
+            "tests": 5,
+            "passed": 4,
+            "failed": 1,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1783368043.267513,
+            "stop": 1783368043.345029
+        },
+        "tests": [
+            {
+                "name": "test_outputs.py::test_report_exists",
+                "status": "passed",
+                "duration": 0.0014070379984332249,
+                "start": 1783368043.3027606,
+                "stop": 1783368043.3061242,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_report_nonempty",
+                "status": "passed",
+                "duration": 0.000999767999019241,
+                "start": 1783368043.306738,
+                "stop": 1783368043.309625,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_total_requests_property",
+                "status": "failed",
+                "raw_status": "call_failed",
+                "duration": 0.0014299409995146561,
+                "start": 1783368043.3101146,
+                "stop": 1783368043.3363419,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "def test_total_requests_property():\n        \"\"\"how many requests there were.\"\"\"\n    \n>       assert \"total_requests\" in json.load(Path(\"/app/report.json\").open())\nE       AssertionError: assert 'total_requests' in {'top_path': '/index.html', 'unique_ips': 3}\nE        +  where {'top_path': '/index.html', 'unique_ips': 3} = <function load at 0x7e139f811620>(<_io.TextIOWrapper name='/app/report.json' mode='r' encoding='utf-8'>)\nE        +    where <function load at 0x7e139f811620> = json.load\nE        +    and   <_io.TextIOWrapper name='/app/report.json' mode='r' encoding='utf-8'> = open()\nE        +      where open = PosixPath('/app/report.json').open\nE        +        where PosixPath('/app/report.json') = Path('/app/report.json')\n\n/tests/test_outputs.py:17: AssertionError",
+                "message": "The test failed in the call phase due to an assertion error"
+            },
+            {
+                "name": "test_outputs.py::test_clients_involved_property",
+                "status": "passed",
+                "duration": 0.0009351579974463675,
+                "start": 1783368043.3366778,
+                "stop": 1783368043.338974,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            },
+            {
+                "name": "test_outputs.py::test_popular_pages_property",
+                "status": "passed",
+                "duration": 0.001237009000760736,
+                "start": 1783368043.339448,
+                "stop": 1783368043.342876,
+                "retries": 0,
+                "file_path": "test_outputs.py"
+            }
+        ]
+    }
+}
